@@ -24,7 +24,7 @@ public class BatchPayoutJob {
                         payout.getId(), e.getMessage());
                 payout.setApprovalStatus("PAID");
             }
-            payoutRepository.save(payout);
+            payoutRepository.save(payout, payout.getId());
         }
     }
 }
